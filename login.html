@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>My App</title>
+    <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+    
+  </head>
+
+  <body >
+    <main class="form-signin">
+      <form onsubmit="return login()">
+        <img class="mb-4" src="" alt="" height="300">
+        <h1 class="h3 mb-3 fw-normal"><b>My App</b> - Login</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" id="loginemail" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="loginpassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
+        
+      </form>
+    </main>
+    <script src="login.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    <p style="text-align: center;">Don't have an account? <a onclick="document.getElementById('id01').style.display='block'" href="#" style="color: blue;">signup</a></p>
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+      
+      <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <div class="container">
+ <div class="row">
+    <div class="col-25">
+      <label for="Name_with_Initials">Name with Initials</label>
+    </div>
+    <div class="col-75">
+      <select id="Name with Initials" name="Name with Initials">
+        <option value="MR.">Mr.</option>
+        <option value="Mrs.">Mrs.</option>
+        <option value="Miss">Miss.</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="bname">Business Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="bname" name="business_name" placeholder="Your business_name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="btype">Business Type </label>
+    </div>
+    <div class="col-75">
+      <select id="btype" name="business-type">
+        <option value="Grocery delivery service">Grocery delivery service</option>
+        <option value="General Store">General Store</option>
+        <option value="Ice cream shop">Ice cream shop</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="baddress">Business Address</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="baddress" name="business_address" placeholder="Your business_address..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="email" name="email" placeholder="Your email..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="password">Password</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="password" name="password" placeholder="Your password..">
+    </div>
+  </div>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" onclick="signup()" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script src="signup.js"></script>
+
+
+</body>
+
+</html>
